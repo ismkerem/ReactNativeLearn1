@@ -6,6 +6,8 @@ import {FlatList} from 'react-native-gesture-handler';
 const list = [
   {pageName: 'AxiosPage', color: 'white'},
   {pageName: 'StateManagementPage', color: 'dark'},
+  {pageName: 'ReduxPage', color: 'white'},
+  {pageName: 'CriptoPage', color: 'white'},
 ];
 
 const HomeScreen = ({navigation}: any) => {
@@ -18,7 +20,6 @@ const HomeScreen = ({navigation}: any) => {
         style={{
           alignContent: 'center',
           flex: 1,
-          paddingVertical: 50,
         }}>
         <FlatList
           data={list}
