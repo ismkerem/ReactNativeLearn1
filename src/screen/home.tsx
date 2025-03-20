@@ -1,19 +1,65 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import AppBar from '../components/AppBar';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {FlatList} from 'react-native-gesture-handler';
 
-const HomeScreen = () => {
+const list = [
+  {pageName: 'AxiosPage', color: 'white'},
+  {pageName: 'StateManagementPage', color: 'dark'},
+];
+
+const HomeScreen = ({navigation}: any) => {
   return (
-    <View style={styles.page}>
-      <AppBar text={'Merhaba'}></AppBar>
-    </View>
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.page}>
+        <AppBar text={'Merhaba'} />
+      </View>
+      <View
+        style={{
+          alignContent: 'center',
+          flex: 1,
+          paddingVertical: 50,
+        }}>
+        <FlatList
+          data={list}
+          keyExtractor={item => item.pageName}
+          renderItem={({item}) => (
+            <TouchableOpacity
+              style={[
+                styles.pageButton,
+                {
+                  backgroundColor: 'grey',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                  margin: 45,
+                },
+              ]}
+              onPress={() => navigation.navigate(item.pageName)}>
+              <Text style={styles.text}>{item.pageName}</Text>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  page: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
+  page: {flex: 1},
+  pageButton: {
+    width: 290,
+    height: 55,
+    marginVertical: 10,
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white',
+    zIndex: 5,
   },
 });
 
