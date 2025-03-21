@@ -7,7 +7,7 @@ const list = [
   {pageName: 'AxiosPage', color: 'white'},
   {pageName: 'StateManagementPage', color: 'dark'},
   {pageName: 'ReduxPage', color: 'white'},
-  {pageName: 'CriptoPage', color: 'white'},
+  {pageName: 'LoginPage', color: 'white'},
 ];
 
 const HomeScreen = ({navigation}: any) => {
