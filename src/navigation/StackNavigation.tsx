@@ -4,6 +4,7 @@ import HomeScreen from '../screen/home';
 import AxiosPage from '../screen/axios';
 import StateManagementPage from '../screen/stateManagemnt';
 import ReduxPage from '../screen/redux';
+import LoginPage from '../screen/login';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,7 @@ const StackNavigator = () => {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="AxiosPage" component={AxiosPage} />
       <Stack.Screen name="ReduxPage" component={ReduxPage} />
+      <Stack.Screen name="LoginPage" component={LoginPage} />
 
       <Stack.Screen
         name="StateManagementPage"
