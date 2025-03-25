@@ -8,6 +8,7 @@ const list = [
   {pageName: 'StateManagementPage', color: 'dark'},
   {pageName: 'ReduxPage', color: 'white'},
   {pageName: 'LoginPage', color: 'white'},
+  {pageName: 'CanvasPage', color: 'white'},
 ];
 
 const HomeScreen = ({navigation}: any) => {
@@ -15,12 +16,7 @@ const HomeScreen = ({navigation}: any) => {
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.page}>
         <AppBar text={'Merhaba'} />
-      </View>
-      <View
-        style={{
-          alignContent: 'center',
-          flex: 1,
-        }}>
+        <View style={{margin: 20}}></View>
         <FlatList
           data={list}
           keyExtractor={item => item.pageName}
@@ -49,8 +45,8 @@ const styles = StyleSheet.create({
   page: {flex: 1},
   pageButton: {
     width: 290,
-    height: 55,
-    marginVertical: 10,
+    height: 50,
+    marginVertical: 5,
     borderRadius: 10,
     paddingHorizontal: 20,
     paddingVertical: 10,
