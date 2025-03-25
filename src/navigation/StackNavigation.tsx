@@ -1,10 +1,10 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from '../screen/home';
 import AxiosPage from '../screen/axios';
-import StateManagementPage from '../screen/stateManagemnt';
+import StateManagementPage from '../screen/DrawingScreen';
 import ReduxPage from '../screen/redux';
 import LoginPage from '../screen/login';
+import CanvasPage from '../screen/DrawingScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +15,7 @@ const StackNavigator = () => {
       <Stack.Screen name="AxiosPage" component={AxiosPage} />
       <Stack.Screen name="ReduxPage" component={ReduxPage} />
       <Stack.Screen name="LoginPage" component={LoginPage} />
+      <Stack.Screen name="CanvasPage" component={CanvasPage} />
 
       <Stack.Screen
         name="StateManagementPage"
